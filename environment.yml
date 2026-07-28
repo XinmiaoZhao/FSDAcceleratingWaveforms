@@ -14,6 +14,7 @@ dependencies:
   - nbformat
   - pip
   - pytest
+  - setuptools=78.1.1
   - pip:
       - lalsuite==7.26.1
       - pycbc==2.9.0

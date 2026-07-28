@@ -26,6 +26,7 @@ DEPENDENCIES = (
     "pycbc",
     "PyYAML",
     "scipy",
+    "setuptools",
 )
 
 

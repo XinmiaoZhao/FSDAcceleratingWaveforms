@@ -9,9 +9,10 @@
     "matplotlib": "3.10.5",
     "numpy": "2.3.2",
     "pycbc": "2.9.0",
-    "scipy": "1.16.0"
+    "scipy": "1.16.0",
+    "setuptools": "78.1.1"
   },
-  "finished_utc": "2026-07-28T08:04:51.497912+00:00",
+  "finished_utc": "2026-07-28T10:10:15.547780+00:00",
   "generated_files": {
     "data/fig01_phase_shifts.csv.gz": {
       "sha256": "3776853b74b1c990fc5f7e8476adf763755094fe2debef135f0456152bcaff63",
@@ -67,7 +68,7 @@
     }
   },
   "mode": "full",
-  "peak_rss_bytes": 4926996480,
+  "peak_rss_bytes": 4280877056,
   "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
   "python": "3.13.1",
   "schema_version": 1,
@@ -79,7 +80,7 @@
     "fig05",
     "fig06"
   ],
-  "started_utc": "2026-07-28T07:59:15.531131+00:00",
+  "started_utc": "2026-07-28T10:04:39.392221+00:00",
   "validation": {
     "failures": [],
     "fig02_rows": 162,
@@ -112,5 +113,5 @@
     "phase_rows": 21592,
     "status": "passed"
   },
-  "wall_time_seconds": 335.9629122920451
+  "wall_time_seconds": 336.15107508399524
 }

@@ -22,9 +22,13 @@ spectral densities, FSD orders, and the Fisher-matrix SNR.
 Create the tested Conda environment:
 
 ```bash
-conda env create -f environment.yml
+conda env create --solver libmamba -f environment.yml
 conda activate fsd-accelerating-waveforms
 ```
+
+The environment is created only once. The initial command downloads and solves
+the pinned dependencies and can take a few minutes; subsequent reproductions
+reuse the installed environment.
 
 Run the lightweight calculation used by continuous integration:
 

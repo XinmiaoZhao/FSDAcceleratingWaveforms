@@ -4,6 +4,7 @@ import gzip
 import hashlib
 import json
 import re
+import tomllib
 from pathlib import Path
 
 import yaml
@@ -157,6 +158,17 @@ def test_code_data_and_figure_licenses_are_present() -> None:
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     assert "GPL-3.0-or-later" in readme
     assert "CC-BY-4.0" in readme
+
+
+def test_pycbc_pkg_resources_compatibility_is_pinned() -> None:
+    environment = yaml.safe_load(
+        (ROOT / "environment.yml").read_text(encoding="utf-8")
+    )
+    assert "setuptools=78.1.1" in environment["dependencies"]
+    project = tomllib.loads(
+        (ROOT / "pyproject.toml").read_text(encoding="utf-8")
+    )
+    assert "setuptools>=78.1.1,<82" in project["project"]["dependencies"]
 
 
 def test_phenomd_semantic_audit_passed() -> None:
