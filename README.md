@@ -26,10 +26,6 @@ conda env create --solver libmamba -f environment.yml
 conda activate fsd-accelerating-waveforms
 ```
 
-The environment is created only once. The initial command downloads and solves
-the pinned dependencies and can take a few minutes; subsequent reproductions
-reuse the installed environment.
-
 Run the lightweight calculation used by continuous integration:
 
 ```bash

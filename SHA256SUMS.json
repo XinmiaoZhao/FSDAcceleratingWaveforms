@@ -43,8 +43,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "a8ca80a8cb98bec404e0dfeb998773a8e8b0cc3d208987f16ffc144d823fc953",
-      "size_bytes": 3709
+      "sha256": "e6ea8ad72c7a390bb1f167676de1d4aa8ab939d501c755cd772e03c70a5422d8",
+      "size_bytes": 3519
     },
     {
       "path": "configs/paper.yaml",
@@ -263,8 +263,8 @@
     },
     {
       "path": "tests/test_release_integrity.py",
-      "sha256": "507d70e05d76c1c99ff90e4cdf8ad0a08f7188368a1bf6969b194880afc50307",
-      "size_bytes": 5958
+      "sha256": "dda87b39907a6c5f6316c1319a4d0ae53e2bbd7f4f045323bed507ac3ae7b165",
+      "size_bytes": 6022
     },
     {
       "path": "tests/test_waveforms.py",
@@ -272,6 +272,6 @@
       "size_bytes": 1990
     }
   ],
-  "generated_utc": "2026-07-28T10:29:42.610542+00:00",
+  "generated_utc": "2026-07-28T10:42:59.612827+00:00",
   "schema_version": 1
 }

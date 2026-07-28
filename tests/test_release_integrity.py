@@ -41,7 +41,10 @@ def release_files() -> dict[str, Path]:
     files: dict[str, Path] = {}
     for path in sorted(ROOT.rglob("*")):
         relative = path.relative_to(ROOT)
-        if any(part in EXCLUDED_PARTS for part in relative.parts):
+        if any(
+            part in EXCLUDED_PARTS or part.endswith(".egg-info")
+            for part in relative.parts
+        ):
             continue
         if path.is_symlink():
             raise AssertionError(f"release contains a symbolic link: {relative}")
