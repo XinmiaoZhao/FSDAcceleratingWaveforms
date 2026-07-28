@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "normalization": "Python AST with comments and documentation-only string expressions removed; module-level demonstration entry points are excluded from the importable-library comparison.",
+  "all_importable_library_asts_equal": true,
+  "removed_module_demo_entry_points": [
+    "phenomd.py",
+    "phenomd_deriv.py"
+  ],
+  "files": {
+    "phenomd.py": {
+      "before_source_sha256": "cb97eaebc8c619fc4d61a233440b0995348fb7bcc7409cd1c75fc9b0bcd9a3a5",
+      "after_source_sha256": "1258208f6c47f638dc6ac113fd19806e3e89a3a302bec74ea2a10aeb93d26f57",
+      "before_library_ast_sha256": "c727315bdf5b5b0e42144bea6f90c249e2085d129d47e1b6c5066c0895d4ec2d",
+      "after_library_ast_sha256": "c727315bdf5b5b0e42144bea6f90c249e2085d129d47e1b6c5066c0895d4ec2d"
+    },
+    "phenomd_deriv.py": {
+      "before_source_sha256": "d4d114b0a27d1225df3e67784b7789ccd60acb7163b6d6d30acb4c856c5941db",
+      "after_source_sha256": "15341fab81a835ddcddd272b49f15c45892735d6b6b655ce664da092a9c30659",
+      "before_library_ast_sha256": "755b6bd9734f16791934f1653199074279b222f9e84f094d4d697dddf7cd8965",
+      "after_library_ast_sha256": "755b6bd9734f16791934f1653199074279b222f9e84f094d4d697dddf7cd8965"
+    },
+    "phenomd_utils.py": {
+      "before_source_sha256": "753871f80c130a07422508da8cfc05727e579b1fda8e7a8ff48e70ec7b2ace1b",
+      "after_source_sha256": "998eeb31404ce88ac031c5be909f947da9bc48f647fef47e7ab9f1430dd868ac",
+      "before_library_ast_sha256": "e12c0ec6432dc9759d0e597e21131694b84f02561c0b8a5364a6787c40c92d72",
+      "after_library_ast_sha256": "e12c0ec6432dc9759d0e597e21131694b84f02561c0b8a5364a6787c40c92d72"
+    }
+  }
+}

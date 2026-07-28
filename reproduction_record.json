@@ -1,0 +1,116 @@
+{
+  "config_path": "configs/paper.yaml",
+  "config_sha256": "4f479b8aaee376a11c772b0ef097f81c3c8c05f53ec502b9d377bf074df4f89a",
+  "data_generation": "computed",
+  "dependencies": {
+    "PyYAML": "6.0.2",
+    "astropy": "7.1.0",
+    "lalsuite": "7.26.1",
+    "matplotlib": "3.10.5",
+    "numpy": "2.3.2",
+    "pycbc": "2.9.0",
+    "scipy": "1.16.0"
+  },
+  "finished_utc": "2026-07-28T08:04:51.497912+00:00",
+  "generated_files": {
+    "data/fig01_phase_shifts.csv.gz": {
+      "sha256": "3776853b74b1c990fc5f7e8476adf763755094fe2debef135f0456152bcaff63",
+      "size_bytes": 326617
+    },
+    "data/fig02_mismatch_aligo_a1e-4.csv": {
+      "sha256": "6b182d26d89c90875f406cb7d8d8fa121b95eb5e047b43ace36404f43e481bf0",
+      "size_bytes": 19684
+    },
+    "data/fig03_mismatch_et_a1e-4.csv": {
+      "sha256": "f07a7a106a635932fc3a0a5b5569fd9e26f50a81b92f6013a7457770b4eb1c6b",
+      "size_bytes": 20320
+    },
+    "data/fig04_mismatch_et_a1e-5.csv": {
+      "sha256": "040abc247e444b3a14fbe8cfacbda6ba1d71e0dca3ec0840d95414d52df97c7f",
+      "size_bytes": 20186
+    },
+    "data/fig05_fsd_order.csv": {
+      "sha256": "28ebe970b8be0c9e2483d083d354de31dfe67747966df074a20f2a5d697d13de",
+      "size_bytes": 13376
+    },
+    "data/fig06_fisher_uncertainty.csv": {
+      "sha256": "4b8cc1b76c3f88e52f52c340aef10cb8e52730d41f570aded2b5604ea2a0220f",
+      "size_bytes": 4120
+    },
+    "data/validation_phase_sample_rate.csv": {
+      "sha256": "cb6381bc535a6927bc6a46bae168a10c8341a819a5ebca790e2dd1f3701e612a",
+      "size_bytes": 696365
+    },
+    "figures/paper_delta_a_comparison.png": {
+      "sha256": "fac76db052d9c37f3a64a1c031309405ebedf9e5a0a144225f477614f21b93dd",
+      "size_bytes": 267434
+    },
+    "figures/paper_mismatch_comparison_ET_e-4_10Hz.png": {
+      "sha256": "a213879184689a4af3a67f78c9101bda44114d605c8bfa0c5d078dcaba493610",
+      "size_bytes": 666683
+    },
+    "figures/paper_mismatch_comparison_ET_e-5_10Hz.png": {
+      "sha256": "50471c58d270fd6414efd900c186b59526b361b094388609c26f0b0e61fa24db",
+      "size_bytes": 810475
+    },
+    "figures/paper_mismatch_comparison_LIGO_e-4_20Hz.png": {
+      "sha256": "05d38effbeaeadaafc047f240bf23444715b26398eac5f1b11b50021bf489367",
+      "size_bytes": 697463
+    },
+    "figures/paper_mismatch_order_comparison_ET_e-5_10Hz.png": {
+      "sha256": "0c70fae13609ceb85d8f5a953484ed0cf2ecd3149d2b11d383c6c70205fd6f00",
+      "size_bytes": 380457
+    },
+    "figures/paper_phase_shift_comparison.png": {
+      "sha256": "199a6506d5c07636a99f9fe3434988daa66bdf03eccfd3598273c28a5f55e769",
+      "size_bytes": 604618
+    }
+  },
+  "mode": "full",
+  "peak_rss_bytes": 4926996480,
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "python": "3.13.1",
+  "schema_version": 1,
+  "selected_figures": [
+    "fig01",
+    "fig02",
+    "fig03",
+    "fig04",
+    "fig05",
+    "fig06"
+  ],
+  "started_utc": "2026-07-28T07:59:15.531131+00:00",
+  "validation": {
+    "failures": [],
+    "fig02_rows": 162,
+    "fig03_rows": 162,
+    "fig04_rows": 162,
+    "fig05_low_mass_relative_errors": {
+      "FSD-order-1": 0.0,
+      "FSD-order-2": 0.0,
+      "FSD-order-3": 0.0,
+      "SPA+PN-order-na": 0.0
+    },
+    "fig05_mass_points": 9,
+    "fig05_rows": 108,
+    "fig05_spins": [
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "fig06_rows": 30,
+    "figure_count": 6,
+    "phase_convergence_display_limit_abs_rad": 5e-05,
+    "phase_convergence_display_max_abs_rad": 4.817927137699962e-05,
+    "phase_convergence_display_median_abs_rad": 1.1269356868564285e-07,
+    "phase_convergence_display_rows": 7105,
+    "phase_convergence_max_abs_rad": 4.817927137699962e-05,
+    "phase_convergence_median_abs_rad": 1.1269356868564285e-07,
+    "phase_convergence_rows": 7105,
+    "phase_finite": true,
+    "phase_rows": 21592,
+    "status": "passed"
+  },
+  "wall_time_seconds": 335.9629122920451
+}

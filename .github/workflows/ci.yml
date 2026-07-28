@@ -1,0 +1,28 @@
+name: Reproduction checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: fsd-accelerating-waveforms
+          environment-file: environment.yml
+          auto-activate-base: false
+      - name: Unit and regression tests
+        shell: bash -el {0}
+        run: python -m pytest
+      - name: Clean quick reproduction
+        shell: bash -el {0}
+        run: python scripts/reproduce_all.py --mode quick --output-root build/quick
+      - name: Walkthrough notebook
+        shell: bash -el {0}
+        run: >-
+          python -m jupyter nbconvert --execute --to notebook
+          --output-dir build/notebook
+          notebooks/paper_figures_walkthrough.ipynb

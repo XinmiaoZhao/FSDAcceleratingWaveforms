@@ -1,0 +1,115 @@
+schema_version: 1
+
+paper:
+  title: "A Novel Method to Construct Frequency-Domain Gravitational Waveform for Accelerating Sources"
+  arxiv_doi: "10.48550/arXiv.2604.00253"
+
+common:
+  approximant: "IMRPhenomD"
+  redshift: 0.2
+  distance_cosmology: "Planck18"
+  f_start_hz: 5.0
+  sample_rate_hz: 4096.0
+  f_final_hz: 2048.0
+  t0_s: 0.0
+
+phase:
+  acceleration_s_inv: 1.0e-5
+  delta_f_hz: 0.00048828125
+  output_points_per_curve: 1200
+  display_mass_threshold_msun: 50.0
+  display_f_max_low_mass_hz: 400.0
+  display_f_max_high_mass_hz: 140.0
+  convergence_max_abs_rad: 5.0e-5
+  systems:
+    - {mass1_msun: 30.0, mass2_msun: 20.0, chi1: 0.0, chi2: 0.0}
+    - {mass1_msun: 30.0, mass2_msun: 20.0, chi1: 0.5, chi2: 0.5}
+    - {mass1_msun: 30.0, mass2_msun: 20.0, chi1: 0.99, chi2: 0.99}
+    - {mass1_msun: 100.0, mass2_msun: 50.0, chi1: 0.0, chi2: 0.0}
+    - {mass1_msun: 100.0, mass2_msun: 50.0, chi1: 0.5, chi2: 0.5}
+    - {mass1_msun: 100.0, mass2_msun: 50.0, chi1: 0.99, chi2: 0.99}
+  convergence_sample_rate_hz: 2048.0
+  convergence_f_final_hz: 1024.0
+
+mismatch:
+  delta_f_hz: 0.000244140625
+  primary_masses_msun: [21.0, 30.875, 40.75, 50.625, 60.5, 70.375, 80.25, 90.125, 100.0]
+  mass_ratio_m1_over_m2: 2.0
+  spins: [0.0, 0.5, 0.99]
+  f_end_margin_hz: 5.0
+  cases:
+    fig02:
+      data_file: "fig02_mismatch_aligo_a1e-4.csv"
+      figure_file: "paper_mismatch_comparison_LIGO_e-4_20Hz.png"
+      psd: "aLIGOZeroDetHighPower"
+      acceleration_s_inv: 1.0e-4
+      f_low_hz: 20.0
+    fig03:
+      data_file: "fig03_mismatch_et_a1e-4.csv"
+      figure_file: "paper_mismatch_comparison_ET_e-4_10Hz.png"
+      psd: "EinsteinTelescopeP1600143"
+      acceleration_s_inv: 1.0e-4
+      f_low_hz: 10.0
+    fig04:
+      data_file: "fig04_mismatch_et_a1e-5.csv"
+      figure_file: "paper_mismatch_comparison_ET_e-5_10Hz.png"
+      psd: "EinsteinTelescopeP1600143"
+      acceleration_s_inv: 1.0e-5
+      f_low_hz: 10.0
+
+fsd_order:
+  data_file: "fig05_fsd_order.csv"
+  figure_file: "paper_mismatch_order_comparison_ET_e-5_10Hz.png"
+  psd: "EinsteinTelescopeP1600143"
+  acceleration_s_inv: 1.0e-5
+  f_low_hz: 10.0
+  chi1: 0.0
+  chi2: 0.0
+  orders: [1, 2, 3]
+
+fisher:
+  data_file: "fig06_fisher_uncertainty.csv"
+  figure_file: "paper_delta_a_comparison.png"
+  psd: "EinsteinTelescopeP1600143"
+  acceleration_s_inv: 1.0e-8
+  snr: 1000.0
+  f_low_hz: 10.0
+  primary_masses_msun: [20.0, 28.3333333333333, 36.6666666666667, 45.0, 53.3333333333333, 61.6666666666667, 70.0, 78.3333333333333, 86.6666666666667, 95.0]
+  mass_ratio_m1_over_m2: 2.0
+  chi1: 0.0
+  chi2: 0.0
+  fsd_order: 3
+  relative_step: 1.0e-4
+  delta_f_hz: 0.0009765625
+  sample_rate_hz: 2048.0
+  f_final_hz: 1024.0
+
+figures:
+  fig01:
+    data_file: "fig01_phase_shifts.csv.gz"
+    figure_file: "paper_phase_shift_comparison.png"
+  fig02: {}
+  fig03: {}
+  fig04: {}
+  fig05: {}
+  fig06: {}
+
+quick:
+  common:
+    sample_rate_hz: 1024.0
+    f_final_hz: 512.0
+  phase:
+    delta_f_hz: 0.015625
+    output_points_per_curve: 240
+    system_indices: [0]
+  mismatch:
+    delta_f_hz: 0.0009765625
+    primary_masses_msun: [30.875, 60.5, 90.125]
+    spins: [0.0]
+  fsd_order:
+    primary_masses_msun: [30.875, 60.5, 90.125]
+  fisher:
+    delta_f_hz: 0.001953125
+    sample_rate_hz: 1024.0
+    f_final_hz: 512.0
+    primary_masses_msun: [28.3333333333333, 61.6666666666667]

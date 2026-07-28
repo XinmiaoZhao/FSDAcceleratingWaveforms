@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fsd-accelerating-waveforms"
+version = "1.0.0"
+description = "Code and numerical data for frequency-domain spectral differentiation waveforms of accelerating sources"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+license = {text = "GPL-3.0-or-later"}
+authors = [
+  {name = "Xinmiao Zhao"},
+  {name = "Han Yan"},
+]
+keywords = [
+  "gravitational waves",
+  "waveform modelling",
+  "acceleration",
+  "IMRPhenomD",
+  "reproducible research",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+  "astropy>=7.1,<8",
+  "matplotlib>=3.10,<4",
+  "numpy>=2.3,<3",
+  "pycbc>=2.9,<3",
+  "PyYAML>=6.0,<7",
+  "scipy>=1.16,<2",
+]
+
+[project.optional-dependencies]
+notebook = [
+  "ipykernel>=6.29,<7",
+  "nbclient>=0.10,<1",
+  "nbformat>=5.10,<6",
+]
+test = [
+  "pytest>=8.4,<10",
+]
+
+[project.urls]
+Repository = "https://github.com/XinmiaoZhao/FSDAcceleratingWaveforms"
+Paper = "https://doi.org/10.48550/arXiv.2604.00253"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]

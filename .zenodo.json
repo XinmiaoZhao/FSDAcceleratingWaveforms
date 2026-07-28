@@ -1,0 +1,46 @@
+{
+  "title": "FSDAcceleratingWaveforms: Code and numerical data for A Novel Method to Construct Frequency-Domain Gravitational Waveform for Accelerating Sources",
+  "upload_type": "software",
+  "description": "Reproducible implementation of frequency-domain spectral differentiation waveforms for accelerating compact-binary sources, together with the numerical tables and figures supporting the associated article.",
+  "creators": [
+    {
+      "name": "Zhao, Xinmiao",
+      "orcid": "0000-0002-5651-4356",
+      "affiliation": "Peking University"
+    },
+    {
+      "name": "Yan, Han",
+      "orcid": "0000-0003-1320-5243",
+      "affiliation": "Peking University"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Chen, Xian",
+      "orcid": "0000-0003-3950-9317",
+      "affiliation": "Peking University",
+      "type": "Supervisor"
+    }
+  ],
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "gravitational waves",
+    "waveform modelling",
+    "acceleration",
+    "IMRPhenomD",
+    "frequency-domain spectral differentiation",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://doi.org/10.48550/arXiv.2604.00253",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    }
+  ],
+  "notes": "Source code is GPL-3.0-or-later. Archived numerical data and generated figures are CC-BY-4.0."
+}

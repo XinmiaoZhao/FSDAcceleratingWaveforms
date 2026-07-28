@@ -1,0 +1,20 @@
+name: fsd-accelerating-waveforms
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.13.1
+  - astropy-base=7.1.0
+  - matplotlib-base=3.10.5
+  - numpy=2.3.2
+  - pyyaml=6.0.2
+  - scipy=1.16.0
+  - ipykernel
+  - nbclient
+  - nbformat
+  - pip
+  - pytest
+  - pip:
+      - lalsuite==7.26.1
+      - pycbc==2.9.0
+      - -e .

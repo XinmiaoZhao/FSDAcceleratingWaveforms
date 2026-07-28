@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "failures": [],
+    "fig02_rows": 162,
+    "fig03_rows": 162,
+    "fig04_rows": 162,
+    "fig05_low_mass_relative_errors": {
+      "FSD-order-1": 0.0,
+      "FSD-order-2": 0.0,
+      "FSD-order-3": 0.0,
+      "SPA+PN-order-na": 0.0
+    },
+    "fig05_mass_points": 9,
+    "fig05_rows": 108,
+    "fig05_spins": [
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "fig06_rows": 30,
+    "figure_count": 6,
+    "phase_convergence_display_limit_abs_rad": 5e-05,
+    "phase_convergence_display_max_abs_rad": 4.817927137699962e-05,
+    "phase_convergence_display_median_abs_rad": 1.1269356868564285e-07,
+    "phase_convergence_display_rows": 7105,
+    "phase_convergence_max_abs_rad": 4.817927137699962e-05,
+    "phase_convergence_median_abs_rad": 1.1269356868564285e-07,
+    "phase_convergence_rows": 7105,
+    "phase_finite": true,
+    "phase_rows": 21592,
+    "status": "passed"
+  },
+  "config_sha256": "4f479b8aaee376a11c772b0ef097f81c3c8c05f53ec502b9d377bf074df4f89a",
+  "reproduction_record": "reproduction_record.json",
+  "schema_version": 1,
+  "status": "passed"
+}

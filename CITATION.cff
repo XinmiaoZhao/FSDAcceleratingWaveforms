@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software or its numerical data, please cite the Zenodo release and the associated article."
+title: "FSDAcceleratingWaveforms: Code and numerical data for A Novel Method to Construct Frequency-Domain Gravitational Waveform for Accelerating Sources"
+type: software
+version: 1.0.0
+license: GPL-3.0-or-later
+repository-code: "https://github.com/XinmiaoZhao/FSDAcceleratingWaveforms"
+authors:
+  - family-names: Zhao
+    given-names: Xinmiao
+    orcid: "https://orcid.org/0000-0002-5651-4356"
+  - family-names: Yan
+    given-names: Han
+    orcid: "https://orcid.org/0000-0003-1320-5243"
+identifiers:
+  - type: doi
+    value: "10.48550/arXiv.2604.00253"
+    description: "Associated article preprint"
+keywords:
+  - gravitational waves
+  - waveform modelling
+  - acceleration
+  - IMRPhenomD
+  - reproducible research
+references:
+  - type: article
+    title: "A Novel Method to Construct Frequency-Domain Gravitational Waveform for Accelerating Sources"
+    doi: "10.48550/arXiv.2604.00253"
+    authors:
+      - family-names: Zhao
+        given-names: Xinmiao
+      - family-names: Yan
+        given-names: Han
+      - family-names: Chen
+        given-names: Xian
