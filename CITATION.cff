@@ -3,6 +3,8 @@ message: "If you use this software or its numerical data, please cite the Zenodo
 title: "FSDAcceleratingWaveforms: Code and numerical data for A Novel Method to Construct Frequency-Domain Gravitational Waveform for Accelerating Sources"
 type: software
 version: 1.0.0
+doi: "10.5281/zenodo.21643294"
+date-released: 2026-07-28
 license: GPL-3.0-or-later
 repository-code: "https://github.com/XinmiaoZhao/FSDAcceleratingWaveforms"
 authors:
@@ -13,6 +15,9 @@ authors:
     given-names: Han
     orcid: "https://orcid.org/0000-0003-1320-5243"
 identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21643294"
+    description: "Version 1.0.0 software archive"
   - type: doi
     value: "10.48550/arXiv.2604.00253"
     description: "Associated article preprint"

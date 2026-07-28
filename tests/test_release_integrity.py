@@ -129,6 +129,14 @@ def test_citation_and_zenodo_metadata_are_consistent() -> None:
     assert cff_creators == zenodo_creators
     assert cff["version"] == zenodo["version"] == "1.0.0"
     assert cff["license"] == zenodo["license"] == "GPL-3.0-or-later"
+    software_doi = "10.5281/zenodo.21643294"
+    assert cff["doi"] == software_doi
+    assert str(cff["date-released"]) == "2026-07-28"
+    assert any(
+        identifier["type"] == "doi"
+        and identifier["value"] == software_doi
+        for identifier in cff["identifiers"]
+    )
     assert zenodo["language"] == "eng"
     assert any(
         contributor["name"] == "Chen, Xian"

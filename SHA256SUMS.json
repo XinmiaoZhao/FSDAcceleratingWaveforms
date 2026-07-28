@@ -18,8 +18,8 @@
     },
     {
       "path": "CITATION.cff",
-      "sha256": "7b462a8d765b117c90dce4325dea0cc2cf53e06393a4da98057ae6ce35a7046d",
-      "size_bytes": 1200
+      "sha256": "d7567409ae49ad90724c4c1b74f408efa158eb3087d005d56ee90902b04590cc",
+      "size_bytes": 1358
     },
     {
       "path": "LICENSE",
@@ -43,8 +43,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "e6ea8ad72c7a390bb1f167676de1d4aa8ab939d501c755cd772e03c70a5422d8",
-      "size_bytes": 3519
+      "sha256": "41ad560b65d4c88d5e47c591583a1a3744bb813e16eaaa41d1e61a5a35c84c42",
+      "size_bytes": 3810
     },
     {
       "path": "configs/paper.yaml",
@@ -263,8 +263,8 @@
     },
     {
       "path": "tests/test_release_integrity.py",
-      "sha256": "fa6b1df007bd747efe530c5b09cf1cf1a51ab9826db5ec87bf7c226692890492",
-      "size_bytes": 6462
+      "sha256": "8357372665d50693b2c2c88c2bd0740975668a0a5b2b869c6defdb5dba3aad4a",
+      "size_bytes": 6749
     },
     {
       "path": "tests/test_waveforms.py",
@@ -272,6 +272,6 @@
       "size_bytes": 1990
     }
   ],
-  "generated_utc": "2026-07-28T10:59:00.855336+00:00",
+  "generated_utc": "2026-07-28T11:36:22.463594+00:00",
   "schema_version": 1
 }

@@ -75,10 +75,18 @@ analysis and interpretation.
 
 ## Citation
 
+Version 1.0.0 is archived at
+[10.5281/zenodo.21643294](https://doi.org/10.5281/zenodo.21643294).
 Citation metadata for the software and associated article are provided in
-`CITATION.cff` and `.zenodo.json`. Until a Zenodo record is attached to a
-tagged release, cite the associated article using
-[10.48550/arXiv.2604.00253](https://doi.org/10.48550/arXiv.2604.00253).
+`CITATION.cff` and `.zenodo.json`.
+
+> X. Zhao and H. Yan, *FSDAcceleratingWaveforms: Code and numerical data for
+> “A Novel Method to Construct Frequency-Domain Gravitational Waveform for
+> Accelerating Sources”*, Version 1.0.0, [Software], Zenodo (2026),
+> https://doi.org/10.5281/zenodo.21643294.
+
+Please also cite the associated
+[article](https://doi.org/10.48550/arXiv.2604.00253).
 
 ## Licenses and third-party attribution
 
