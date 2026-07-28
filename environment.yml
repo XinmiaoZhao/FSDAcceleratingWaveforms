@@ -11,6 +11,7 @@ dependencies:
   - scipy=1.16.0
   - ipykernel
   - nbclient
+  - nbconvert=7.17.1
   - nbformat
   - pip
   - pytest

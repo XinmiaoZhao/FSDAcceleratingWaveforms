@@ -113,8 +113,8 @@
     },
     {
       "path": "environment.yml",
-      "sha256": "083ff7a01f1b494622772f508e6af9f8da78da15b46b05e8d91521f5ff0ff329",
-      "size_bytes": 355
+      "sha256": "3d1d8b26a1e4b8ef38fa04a3e8ae18dea018c6aeb2d4d522c0a1e36bf3254c6b",
+      "size_bytes": 376
     },
     {
       "path": "figures/README.md",
@@ -158,8 +158,8 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "4a0d675000b07a65ee638429efec15407e60b7332feb45ce3ce9cad405663dc6",
-      "size_bytes": 1399
+      "sha256": "947e434467629a0ff444971c3d0e24df696dfa0392a349e74f2b10ed2978dd7b",
+      "size_bytes": 1423
     },
     {
       "path": "reproduction_record.json",
@@ -263,8 +263,8 @@
     },
     {
       "path": "tests/test_release_integrity.py",
-      "sha256": "dda87b39907a6c5f6316c1319a4d0ae53e2bbd7f4f045323bed507ac3ae7b165",
-      "size_bytes": 6022
+      "sha256": "fa6b1df007bd747efe530c5b09cf1cf1a51ab9826db5ec87bf7c226692890492",
+      "size_bytes": 6462
     },
     {
       "path": "tests/test_waveforms.py",
@@ -272,6 +272,6 @@
       "size_bytes": 1990
     }
   ],
-  "generated_utc": "2026-07-28T10:42:59.612827+00:00",
+  "generated_utc": "2026-07-28T10:59:00.855336+00:00",
   "schema_version": 1
 }

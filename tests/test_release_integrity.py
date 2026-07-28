@@ -174,6 +174,20 @@ def test_pycbc_pkg_resources_compatibility_is_pinned() -> None:
     assert "setuptools>=78.1.1,<82" in project["project"]["dependencies"]
 
 
+def test_notebook_execution_dependency_is_declared() -> None:
+    environment = yaml.safe_load(
+        (ROOT / "environment.yml").read_text(encoding="utf-8")
+    )
+    assert "nbconvert=7.17.1" in environment["dependencies"]
+    project = tomllib.loads(
+        (ROOT / "pyproject.toml").read_text(encoding="utf-8")
+    )
+    assert (
+        "nbconvert>=7.17,<8"
+        in project["project"]["optional-dependencies"]["notebook"]
+    )
+
+
 def test_phenomd_semantic_audit_passed() -> None:
     audit = json.loads(
         (ROOT / "docs" / "phenomd_semantic_audit.json").read_text(
