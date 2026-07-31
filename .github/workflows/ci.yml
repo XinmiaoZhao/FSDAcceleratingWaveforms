@@ -3,26 +3,103 @@ name: Reproduction checks
 on:
   push:
   pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 2 * * 1"
+
+permissions:
+  contents: read
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  quick:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
-      - uses: conda-incubator/setup-miniconda@v3
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: conda-incubator/setup-miniconda@835234971496cad1653abb28a638a281cf32541f # v3.2.0
         with:
           activate-environment: fsd-accelerating-waveforms
-          environment-file: environment.yml
+          environment-file: environment-locks/linux-64.conda.lock
+          auto-update-conda: false
           auto-activate-base: false
+          miniforge-version: "24.11.3-2"
+      - name: Install source tree without dependency resolution
+        shell: bash -el {0}
+        run: python -m pip install --no-deps -e .
+      - name: Verify exact Conda lock
+        shell: bash -el {0}
+        run: |
+          mkdir -p build
+          conda list --explicit --sha256 > build/environment-explicit.txt
+          python scripts/verify_explicit_environment.py \
+            environment-locks/linux-64.conda.lock \
+            build/environment-explicit.txt
       - name: Unit and regression tests
         shell: bash -el {0}
         run: python -m pytest
       - name: Clean quick reproduction
         shell: bash -el {0}
-        run: python scripts/reproduce_all.py --mode quick --output-root build/quick
+        run: >-
+          FSD_REQUIRE_EXACT_LOCK=1
+          python scripts/reproduce_all.py --mode quick --output-root build/quick
       - name: Walkthrough notebook
         shell: bash -el {0}
         run: >-
           python -m jupyter nbconvert --execute --to notebook
           --output-dir build/notebook
           notebooks/paper_figures_walkthrough.ipynb
+
+  full:
+    if: >-
+      github.event_name == 'schedule' ||
+      github.event_name == 'workflow_dispatch' ||
+      startsWith(github.ref, 'refs/tags/')
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-24.04
+            lock: environment-locks/linux-64.conda.lock
+          - os: macos-15
+            lock: environment-locks/osx-arm64.conda.lock
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: conda-incubator/setup-miniconda@835234971496cad1653abb28a638a281cf32541f # v3.2.0
+        with:
+          activate-environment: fsd-accelerating-waveforms
+          environment-file: ${{ matrix.lock }}
+          auto-update-conda: false
+          auto-activate-base: false
+          miniforge-version: "24.11.3-2"
+      - name: Install source tree without dependency resolution
+        shell: bash -el {0}
+        run: python -m pip install --no-deps -e .
+      - name: Verify and export exact environment
+        shell: bash -el {0}
+        run: |
+          mkdir -p build
+          conda list --explicit --sha256 > build/environment-explicit.txt
+          python scripts/verify_explicit_environment.py \
+            "${{ matrix.lock }}" build/environment-explicit.txt
+      - name: Full clean reproduction
+        shell: bash -el {0}
+        run: >-
+          FSD_ENVIRONMENT_LOCK="$PWD/${{ matrix.lock }}"
+          FSD_REQUIRE_EXACT_LOCK=1
+          python scripts/reproduce_all.py --mode full --output-root build/full
+      - name: Upload full record
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: full-reproduction-${{ matrix.os }}-${{ github.sha }}
+          path: |
+            build/full/reproduction_record.json
+            build/full/docs/validation_status.json
+            build/environment-explicit.txt
+          if-no-files-found: error
+          retention-days: 30

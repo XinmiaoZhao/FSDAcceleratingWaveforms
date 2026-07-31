@@ -16,8 +16,9 @@ A release is reproducible only when all of the following checks pass:
    displayed in Fig. 1: 5–400 Hz for the lower-mass systems and 5–140 Hz for
    the higher-mass systems.
 9. The walkthrough notebook executes from top to bottom in a clean kernel.
-10. Quick and full clean-environment reproductions pass, and the release
-    manifest exactly matches the exported files.
+10. Quick and full clean-environment reproductions pass only after the active
+    Conda package URL+SHA256 set exactly matches the platform lock, and the
+    release manifest exactly matches the exported files.
 
 The latest full-run measurements and check results are stored in
 `reproduction_record.json` and `docs/validation_status.json`.

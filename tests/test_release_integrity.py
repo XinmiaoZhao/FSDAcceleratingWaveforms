@@ -176,10 +176,39 @@ def test_pycbc_pkg_resources_compatibility_is_pinned() -> None:
         (ROOT / "environment.yml").read_text(encoding="utf-8")
     )
     assert "setuptools=78.1.1" in environment["dependencies"]
+    assert "pycbc=2.9.0" in environment["dependencies"]
+    pip_dependencies = next(
+        item["pip"]
+        for item in environment["dependencies"]
+        if isinstance(item, dict) and "pip" in item
+    )
+    assert pip_dependencies == ["-e ."]
     project = tomllib.loads(
         (ROOT / "pyproject.toml").read_text(encoding="utf-8")
     )
     assert "setuptools>=78.1.1,<82" in project["project"]["dependencies"]
+
+
+def test_platform_explicit_locks_are_complete_and_scientific() -> None:
+    for platform_name, filename in (
+        ("linux-64", "linux-64.conda.lock"),
+        ("osx-arm64", "osx-arm64.conda.lock"),
+    ):
+        text = (ROOT / "environment-locks" / filename).read_text(
+            encoding="utf-8"
+        )
+        records = [
+            line
+            for line in text.splitlines()
+            if line and not line.startswith(("#", "@"))
+        ]
+        assert f"# platform: {platform_name}" in text
+        assert len(records) > 200
+        assert len(records) == len(set(records))
+        assert all(line.startswith("https://conda.anaconda.org/conda-forge/") for line in records)
+        assert all(len(line.rsplit("#", 1)[-1]) == 64 for line in records)
+        assert any("/pycbc-2.9.0-" in line for line in records)
+        assert any("/python-lalsimulation-6.2.0-" in line for line in records)
 
 
 def test_notebook_execution_dependency_is_declared() -> None:

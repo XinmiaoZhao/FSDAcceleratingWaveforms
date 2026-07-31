@@ -19,23 +19,32 @@ spectral densities, FSD orders, and the Fisher-matrix SNR.
 
 ## Reproduce the results
 
-Create the tested Conda environment:
+Create the tested Conda environment from the platform-specific explicit lock:
 
 ```bash
-conda env create --solver libmamba -f environment.yml
+conda create --name fsd-accelerating-waveforms \
+  --file environment-locks/linux-64.conda.lock
+# Apple Silicon: use environment-locks/osx-arm64.conda.lock
 conda activate fsd-accelerating-waveforms
+python -m pip install --no-deps -e .
 ```
+
+`environment.yml` remains the human-readable source specification. The
+explicit locks pin every Conda package URL and SHA256; PyCBC and the required
+LAL components are installed from Conda Forge, while pip installs only this
+repository's source tree.
 
 Run the lightweight calculation used by continuous integration:
 
 ```bash
-python scripts/reproduce_all.py --mode quick --output-root build/quick
+FSD_REQUIRE_EXACT_LOCK=1 \
+  python scripts/reproduce_all.py --mode quick --output-root build/quick
 ```
 
 Recompute all six article datasets and figures:
 
 ```bash
-python scripts/reproduce_all.py --mode full
+FSD_REQUIRE_EXACT_LOCK=1 python scripts/reproduce_all.py --mode full
 ```
 
 Regenerate figures directly from the archived numerical tables:
@@ -62,9 +71,10 @@ under the ignored `build/` directory.
 - `docs/`: data definitions, validation criteria, and validation results.
 
 `reproduction_record.json` records the exact configuration hash, dependency
-versions, runtime, peak memory use, generated-file hashes, and scientific
-validation results for the archived full calculation. `SHA256SUMS.json`
-provides a release-wide file manifest.
+versions and Conda build strings, exact-lock verification, CPU and numerical
+library identity, runtime, peak memory use, generated-file hashes, and
+scientific validation results for the archived full calculation.
+`SHA256SUMS.json` provides a release-wide file manifest.
 
 ## Contributions
 

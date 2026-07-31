@@ -1,10 +1,10 @@
 {
-  "file_count": 54,
+  "file_count": 58,
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "sha256": "4a33a8551106648e5ae726d75621c5ac94264c7756f53acaaad1cd0435da81ce",
-      "size_bytes": 824
+      "sha256": "d59ad78b85228f3ed9c1ebe330077e8a0115feeeae22c557f5f843eeadda84df",
+      "size_bytes": 3755
     },
     {
       "path": ".gitignore",
@@ -43,8 +43,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "41ad560b65d4c88d5e47c591583a1a3744bb813e16eaaa41d1e61a5a35c84c42",
-      "size_bytes": 3810
+      "sha256": "5e87460341636b25309959bc104c7ad4abaac3a0cc11ae3e0b0bb496a2ccf0ba",
+      "size_bytes": 4381
     },
     {
       "path": "configs/paper.yaml",
@@ -103,8 +103,8 @@
     },
     {
       "path": "docs/validation.md",
-      "sha256": "ba7d0ed0d27960534ee9385436fdfb2596835e035caf42ee918a21d6f241986d",
-      "size_bytes": 1271
+      "sha256": "547e0c207913fed4b8e90a3a79da8bb67ac0d7aed4bcdd2872c9da5558ce1d56",
+      "size_bytes": 1360
     },
     {
       "path": "docs/validation_status.json",
@@ -112,9 +112,24 @@
       "size_bytes": 1087
     },
     {
+      "path": "environment-locks/README.md",
+      "sha256": "6a9b598b871fbe0259367d5a38bc61c911a021e0f50eadb73a0e8d60dad72049",
+      "size_bytes": 553
+    },
+    {
+      "path": "environment-locks/linux-64.conda.lock",
+      "sha256": "fa94b9ef67fd1ed3e93a1fa39cf553bd1be96a9bd1f1a5c8e0a76d500f3d70c3",
+      "size_bytes": 32147
+    },
+    {
+      "path": "environment-locks/osx-arm64.conda.lock",
+      "sha256": "8037b982838334557cc5aecdbccc0eefbbee0e0fcc422d4e8c5bda3a087e404b",
+      "size_bytes": 31940
+    },
+    {
       "path": "environment.yml",
-      "sha256": "3d1d8b26a1e4b8ef38fa04a3e8ae18dea018c6aeb2d4d522c0a1e36bf3254c6b",
-      "size_bytes": 376
+      "sha256": "daa64fedb6af45724ccabe3708c06e7a3cf736c7eaa3a099fd8488db1d0f6c31",
+      "size_bytes": 346
     },
     {
       "path": "figures/README.md",
@@ -158,7 +173,7 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "947e434467629a0ff444971c3d0e24df696dfa0392a349e74f2b10ed2978dd7b",
+      "sha256": "97e15802c8af688c12a6dc8ec55fb2be95ba8deda2461f948292a1d2af98344d",
       "size_bytes": 1423
     },
     {
@@ -180,6 +195,11 @@
       "path": "scripts/reproduce_all.py",
       "sha256": "6d2bc151e5ec3730084f928e63a3b9b395388ded5be9a8aaf9e7832af0c1d8ed",
       "size_bytes": 1348
+    },
+    {
+      "path": "scripts/verify_explicit_environment.py",
+      "sha256": "615dbbcbddb1c3963d86a4b217bb6239efd3c3cf9affa9b075dbcbfa763502e7",
+      "size_bytes": 1751
     },
     {
       "path": "src/fsd_accelerating_waveforms/__init__.py",
@@ -218,8 +238,8 @@
     },
     {
       "path": "src/fsd_accelerating_waveforms/reproduction.py",
-      "sha256": "61975d9035cafb77e1704b244648494809420a00bca11b95ba489a98533204db",
-      "size_bytes": 4786
+      "sha256": "63cc939cbefca4ec4bbe85775345c071407d184360197de9b06466e0164c9a4c",
+      "size_bytes": 10897
     },
     {
       "path": "src/fsd_accelerating_waveforms/tables.py",
@@ -243,8 +263,8 @@
     },
     {
       "path": "tests/test_config_and_api.py",
-      "sha256": "e55b3223e5f29d25b4db42512cf1e95a609c4cf1eecea8863fec4c45cef7ad29",
-      "size_bytes": 1438
+      "sha256": "94bd52af826916031a918832e8212f0baee14eb2466fabd8ac06f097d4498831",
+      "size_bytes": 2546
     },
     {
       "path": "tests/test_notebook_structure.py",
@@ -263,15 +283,15 @@
     },
     {
       "path": "tests/test_release_integrity.py",
-      "sha256": "8357372665d50693b2c2c88c2bd0740975668a0a5b2b869c6defdb5dba3aad4a",
-      "size_bytes": 6749
+      "sha256": "d20f40049a19f10caea7ece0b2a18d767e2b3c7a56c7116232444b6ba7a0257e",
+      "size_bytes": 7914
     },
     {
       "path": "tests/test_waveforms.py",
-      "sha256": "dcad1f184b55ea165251127040450a66f883d20c203892b464b61454c0a56032",
-      "size_bytes": 1990
+      "sha256": "f03e3d6a1839de8cfa90c5aa937587cc61366de6c952d7f61ed54ebd39342c11",
+      "size_bytes": 3402
     }
   ],
-  "generated_utc": "2026-07-28T11:36:22.463594+00:00",
+  "generated_utc": "2026-07-30T22:48:56.839517+00:00",
   "schema_version": 1
 }
